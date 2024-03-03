@@ -10,9 +10,9 @@ This repository contains a custom Extract, Load, Transform (ELT) project that ut
 3. source_dbt_init: This folder contains the SQL script that initializes the source databse with sample data.
 
 ## How It Works
-- Docker Compose: Uusing the docker-compose.yaml file, three Docker containers are launched:
+- Docker Compose: Using the `docker-compose.yaml` file, three Docker containers are launched:
   - A source PostgreSQL database with sample data.
   - A destination PostgreSQL database.
   - A Python environment executing the ELT script.
-- ELT Process: The elt_script.py script waits for the source PostgreSQL database to be available, then uses pg_dump to export the source database to a SQL file. It then employs psql to load this SQL file into the destination PostgreSQL database.
-- Database Initialization: The init.sql script initializes the source database with sample data, creating tables and populating them with sample data.
+- ELT Process: The `elt_script.py` script waits for the source PostgreSQL database to be available, then uses `pg_dump` to export the source database to a SQL file. It then employs `psql` to load this SQL file into the destination PostgreSQL database.
+- Database Initialization: The `init.sql` script initializes the source database with sample data, creating tables and populating them with sample data.
